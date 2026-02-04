@@ -1,0 +1,23 @@
+[
+    {
+        "recipient": "recipient",
+        "sender": "sender",
+        "subject": "subject",
+        "body": "body",
+        "id": "d4620b4f-2ad4-44fd-8a58-dfa59ef71f35"
+    },
+    {
+        "recipient": "Alan",
+        "sender": "Nicholas",
+        "subject": "I am cool",
+        "body": "Idk",
+        "id": "6ae8d5d8-c4cc-4ea9-a4d6-d48fb55a28b9"
+    },
+    {
+        "recipient": "Recipient",
+        "sender": "Alan",
+        "subject": "I am cool",
+        "body": "yeah",
+        "id": "e02dcbaa-0dad-40f5-867d-6212bcee0fad"
+    }
+]
