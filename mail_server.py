@@ -50,7 +50,7 @@ def add_mail(mail_entry: Dict[str, str]) -> str:
 def delete_mail(mail_id: str) -> bool:
     """TODO: fill out this docstring (using the load_mail docstring as a guide)
 
-    Deletes mail
+    Deletes mail from inbox
 
     Returns:
         bool: True if the mail was able to be deleted, false otherwise
@@ -70,8 +70,7 @@ def get_mail(mail_id: str) -> Optional[Dict[str, str]]:
     gets mail from list
 
     Returns: 
-        entry: new mail id
-        none: otherwise
+        Optional - Gives the information from the JSON file 
     """
     mail = load_mail()
     for entry in mail:
@@ -139,6 +138,7 @@ def delete_mail_route(mail_id: str):
         bool: True if the mail was deleted, False otherwise
     """
     # TODO: implement this function
+    #copied similar format as the other app.route functions except swapped the function to delete_mail
     res = jsonify(delete_mail(mail_id))
     res.status_code = 200 #Status code for "ok"
     return res
@@ -178,7 +178,7 @@ def get_inbox_route(recipient: str):
 # HINT: start with soemthing like this:
 #   @app.route('/mail/sent/<sender>', ...)
 
-#mostly copied from the function above, just replaced the get_inbox with get_sent to get all the sent emails
+
 @app.route('/mail/sent/<sender>', methods=['GET'])
 def get_sender_inbox(sender: str):
     """
@@ -191,6 +191,7 @@ def get_sender_inbox(sender: str):
         list: A list of dictionaries representing the mail entries
     """
     
+    #mostly copied from the function above, just replaced the get_inbox with get_sent to get all the sent emails
     res = jsonify(get_sent(sender))
     res.status_code = 200
     return res
