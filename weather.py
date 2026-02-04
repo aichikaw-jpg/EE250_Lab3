@@ -1,7 +1,7 @@
 import requests
 
 # WeatherAPI key
-WEATHER_API_KEY = '6ae8d5d8-c4cc-4ea9-a4d6-d48fb55a28b9'  # TODO: Replace with your own WeatherAPI key
+WEATHER_API_KEY = '29ee40b8f7bb4a4490621150260402'  # TODO: Replace with your own WeatherAPI key
 
 def get_weather(city):
     # TODO: Build the API request URL using the base API endpoint, the API key, and the city name provided by the user.
@@ -9,6 +9,7 @@ def get_weather(city):
     #                  base API endpoint                                          API key              city name
     apirequestURL = "http://api.weatherapi.com/v1/forecast.json" + "?key=" + WEATHER_API_KEY + "&q=" + city
     
+    print("API Request URL: " + apirequestURL)
     # TODO: Make the HTTP request to fetch weather data using the 'requests' library.
     
     response = requests.get(apirequestURL)
@@ -61,16 +62,16 @@ def get_weather(city):
 
         # TODO: Display the extracted weather information in a well-formatted manner.
         print(f"Weather data for {city}...")
-        print(f"Temperature(Farenheit): " + {tempF})
-        print(f"Temperature(Feels like): " + {tempFeels})
-        print(f"Weather Condition: " + {weatherCon})
-        print(f"Humidity Percentage: " + {humidityPer})
-        print(f"Wind Speed: " + {windSpeed})
-        print(f"Wind Direction: " + {windDirection})
-        print(f"Atmospheric Pressure(mb): " + {atmPressure})
-        print(f"UV Index Value: " + {uvIndex})
-        print(f"Cloud Percentage: " + {cloudPercentage})
-        print(f"Visibility(Miles): " + {visibMiles})
+        print(f"Temperature(Farenheit): {tempF}")
+        print(f"Temperature(Feels like): {tempFeels}")
+        print(f"Weather Condition: {weatherCon}")
+        print(f"Humidity Percentage: {humidityPer}")
+        print(f"Wind Speed: {windSpeed}")
+        print(f"Wind Direction: {windDirection}")
+        print(f"Atmospheric Pressure(mb): {atmPressure}")
+        print(f"UV Index Value: {uvIndex}")
+        print(f"Cloud Percentage: {cloudPercentage}")
+        print(f"Visibility(Miles): {visibMiles}")
 
     else:
         # TODO: Implement error handling for common status codes. Provide meaningful error messages based on the status code.
