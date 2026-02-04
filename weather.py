@@ -19,6 +19,9 @@ def get_weather(city):
 
     if response.status_code == 200:
         # TODO: Parse the JSON data returned by the API. Extract and process the following information:
+
+        data = response.json()
+
         # - Current temperature in Fahrenheit
 
         tempF = data["current"]["temp_f"]
@@ -58,16 +61,16 @@ def get_weather(city):
 
         # TODO: Display the extracted weather information in a well-formatted manner.
         print(f"Weather data for {city}...")
-        print(f"Temperature(Farenheit): " + tempF)
-        print(f"Temperature(Feels like): " + tempFeels)
-        print(f"Weather Condition: " + weatherCon)
-        print(f"Humidity Percentage: " + humidityPer)
-        print(f"Wind Speed: " + windSpeed)
-        print(f"Wind Direction: " + windDirection)
-        print(f"Atmospheric Pressure(mb): " + atmPressure)
-        print(f"UV Index Value: " + uvIndex)
-        print(f"Cloud Percentage: " + cloudPercentage)
-        print(f"Visibility(Miles): " + visibMiles)
+        print(f"Temperature(Farenheit): " + {tempF})
+        print(f"Temperature(Feels like): " + {tempFeels})
+        print(f"Weather Condition: " + {weatherCon})
+        print(f"Humidity Percentage: " + {humidityPer})
+        print(f"Wind Speed: " + {windSpeed})
+        print(f"Wind Direction: " + {windDirection})
+        print(f"Atmospheric Pressure(mb): " + {atmPressure})
+        print(f"UV Index Value: " + {uvIndex})
+        print(f"Cloud Percentage: " + {cloudPercentage})
+        print(f"Visibility(Miles): " + {visibMiles})
 
     else:
         # TODO: Implement error handling for common status codes. Provide meaningful error messages based on the status code.
