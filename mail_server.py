@@ -139,7 +139,10 @@ def delete_mail_route(mail_id: str):
         bool: True if the mail was deleted, False otherwise
     """
     # TODO: implement this function
-    pass # remove this line
+    res = jsonify(delete_mail(mail_id))
+    res.status_code = 200 #Status code for "ok"
+    return res
+    
 
 @app.route('/mail/<mail_id>', methods=['GET'])
 def get_mail_route(mail_id: str):
@@ -175,6 +178,7 @@ def get_inbox_route(recipient: str):
 # HINT: start with soemthing like this:
 #   @app.route('/mail/sent/<sender>', ...)
 
+#mostly copied from the function above, just replaced the get_inbox with get_sent to get all the sent emails
 @app.route('/mail/sent/<sender>', methods=['GET'])
 def get_sender_inbox(sender: str):
     """
@@ -186,7 +190,8 @@ def get_sender_inbox(sender: str):
     Returns:
         list: A list of dictionaries representing the mail entries
     """
-    res = jsonify(get_inbox(sender))
+    
+    res = jsonify(get_sent(sender))
     res.status_code = 200
     return res
 

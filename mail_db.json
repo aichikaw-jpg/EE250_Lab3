@@ -7,17 +7,24 @@
         "id": "d4620b4f-2ad4-44fd-8a58-dfa59ef71f35"
     },
     {
-        "recipient": "Alan",
-        "sender": "Nicholas",
-        "subject": "I am cool",
-        "body": "Idk",
-        "id": "6ae8d5d8-c4cc-4ea9-a4d6-d48fb55a28b9"
-    },
-    {
         "recipient": "Recipient",
         "sender": "Alan",
         "subject": "I am cool",
         "body": "yeah",
         "id": "e02dcbaa-0dad-40f5-867d-6212bcee0fad"
+    },
+    {
+        "recipient": "Alan",
+        "sender": "Aran",
+        "subject": "I am awesome",
+        "body": "I am definitely not a narcisist",
+        "id": "6e665ec3-903a-4062-ac53-de8b243daf5c"
+    },
+    {
+        "recipient": "Nicholas",
+        "sender": "Alan",
+        "subject": "I hope that I get an A on this assignment",
+        "body": "I hope that I don't fail this class",
+        "id": "7839fa16-5078-46b8-b99e-f8aeccff9fd6"
     }
 ]
